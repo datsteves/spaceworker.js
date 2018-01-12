@@ -9,7 +9,7 @@ import the spaceworker.js into your project
 
 app.js
 ```javascript
-const worker = SpaceWorker("worker.js")
+const worker = new SpaceWorker("worker.js")
 
 worker.run("sayHelloWorld", "hello", "world")
     .then((result)=>{
