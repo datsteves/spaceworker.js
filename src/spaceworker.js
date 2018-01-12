@@ -1,3 +1,5 @@
+const workers = {}
+
 class SpaceController {
     constructor (path) {
         if(path === undefined) {
@@ -34,7 +36,7 @@ class SpaceController {
             })
     }
 
-    run(func, args) {
+    run(func, ...args) {
         return this.fetchedWorker
             .then(() => {
                 return new Promise((resolve)=>{
@@ -67,7 +69,7 @@ const SpaceWorker = {
                     self.postMessage({
                         type: 'functionCall',
                         id: e.data.id,
-                        msg: m[e.data.func]()
+                        msg: m[e.data.func](...e.data.args)
                     })
                 } else {
                     throw new Error('Function ' + e.data.func + ' was not found on ' + mod.prototype.constructor.name)
