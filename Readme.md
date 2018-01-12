@@ -13,7 +13,7 @@ const worker = SpaceWorker("worker.js")
 
 worker.run("sayHelloWorld", "hello", "world")
     .then((result)=>{
-        console.log(result) // hello world ;)
+        console.log(result) // hello world :)
     })
 ```
 worker.js
