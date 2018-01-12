@@ -1,0 +1,19 @@
+{
+  "name": "spaceworker.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "datSteves <admin@blackgamelp.de>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.0.6",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.15.0",
+    "jest": "^22.0.6"
+  }
+}
